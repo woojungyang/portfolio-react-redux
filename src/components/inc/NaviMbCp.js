@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import styled, { font, color } from '../../style';
+import styled, { font, media, Underline } from '../../style';
 
 const Wrapper = styled.div`
   width: 300px;
-  height: 100vh;
+  height: 100px;
   position: absolute;
   top: 3.5em;
   right: 0;
 `;
-const Navi = styled.li`
+
+const NaviLink = styled(Link)`
   list-style: none;
   margin: 1em;
   font-family: ${font.en};
@@ -18,23 +19,25 @@ const Navi = styled.li`
   font-size: 1.15em;
   align-items: center;
   cursor: pointer;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    color: red;
+  }
+  @media ${media.sm} {
+    display: none;
+  }
 `;
 
 function NaviMbCp() {
   return (
-    <Wrapper>
-      <Navi>
-        <Link to="#about">About</Link>
-      </Navi>
-      <Navi>
-        <Link to="#resume">Résumé</Link>
-      </Navi>
-      <Navi>
-        <Link to="#skills">Skills</Link>
-      </Navi>
-      <Navi>
-        <Link to="#works">Works</Link>
-      </Navi>
+    <Wrapper >
+      <NaviLink to="/about">About</NaviLink>
+      <NaviLink to="/resume">Résumé</NaviLink>
+      <NaviLink to="/skills">Skills</NaviLink>
+      <NaviLink to="/works">Works</NaviLink>
     </Wrapper>
   );
 }

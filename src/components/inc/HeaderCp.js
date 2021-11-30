@@ -4,9 +4,10 @@ import styled, { color, media } from '../../style';
 import NaviCp from './NaviCp';
 
 const HeaderWrap = styled.header`
-  border-bottom: 1px solid ${color.lightBlack};
   opacity: 0.7;
   width: 100%;
+  position: fixed;
+  z-index: 9999;
 `;
 
 function HeaderCp() {

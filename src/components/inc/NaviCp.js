@@ -6,6 +6,7 @@ import AlignHorizontalRightSharpIcon from '@mui/icons-material/AlignHorizontalRi
 import NaviMbCp from './NaviMbCp';
 
 const NaviWrapper = styled.ul`
+  color: white;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -23,9 +24,12 @@ const NaviLink = styled(Link)`
   font-size: 1.15em;
   align-items: center;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.7;
   &:hover {
     opacity: 1;
+  }
+  &:active {
+    color: red;
   }
   @media ${media.sm} {
     display: none;
@@ -40,6 +44,7 @@ const Mbbutton = styled.li`
   @media ${media.sm} {
     font-weight: 500;
     margin: 1em;
+    padding-right: 1em;
     font-family: ${font.en};
     font-size: 1.15em;
     cursor: pointer;
@@ -57,10 +62,10 @@ function NaviCp() {
   return (
     <NaviWrapper>
       <NaviWrap>
-        <NaviLink to="#about">About</NaviLink>
-        <NaviLink to="#resume">Résumé</NaviLink>
-        <NaviLink to="#skills">Skills</NaviLink>
-        <NaviLink to="#works">Works</NaviLink>
+        <NaviLink to="/about">About</NaviLink>
+        <NaviLink to="/resume">Résumé</NaviLink>
+        <NaviLink to="/skills">Skills</NaviLink>
+        <NaviLink to="/works">Works</NaviLink>
       </NaviWrap>
       <MbWrapRel>
         <Mbbutton>
