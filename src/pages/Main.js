@@ -8,14 +8,15 @@ import HeaderCp from '../components/inc/HeaderCp';
 import bg from '../assets/img/background.mp4';
 
 const typeWriter = [
-  '<portfoilo / >',
+  // '<portfoilo / >',
   'Hello:D',
   `<I'm Web-Developer / >`,
   `<I'm front-end Developer / >`,
 ];
 
 const BgWrapper = styled.div`
-  opacity: 0.5;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -57,7 +58,7 @@ function Main() {
   return (
     <BgWrapper>
       <HeaderCp />
-      <video autoplay muted width="100%">
+      <video autoPlay muted loop className="w100">
         <source src={bg} type="video/mp4" />
       </video>
       <WrapperText>
