@@ -4,40 +4,39 @@ import { Link } from 'react-router-dom';
 import styled, { font, media, Underline } from '../../style';
 
 const Wrapper = styled.div`
-  width: 300px;
-  height: 100px;
+  background-color: rgba(1, 1, 1, 0.5);
+  width: 200px;
+  height: 100vh;
   position: absolute;
-  top: 3.5em;
-  right: 0;
+  top: 3.35em;
+  right: 1%;
 `;
 
-const NaviLink = styled(Link)`
+const Navi = styled.li`
   list-style: none;
   margin: 1em;
   font-family: ${font.en};
   font-weight: 500;
-  font-size: 1.15em;
+  font-size: 1.2em;
   align-items: center;
   cursor: pointer;
-  opacity: 0.5;
-  &:hover {
-    opacity: 1;
-  }
-  &:active {
-    color: red;
-  }
-  @media ${media.sm} {
-    display: none;
-  }
 `;
 
 function NaviMbCp() {
   return (
-    <Wrapper >
-      <NaviLink to="/about">About</NaviLink>
-      <NaviLink to="/resume">Résumé</NaviLink>
-      <NaviLink to="/skills">Skills</NaviLink>
-      <NaviLink to="/works">Works</NaviLink>
+    <Wrapper>
+      <Navi>
+        <Link to="#about">About</Link>
+      </Navi>
+      <Navi>
+        <Link to="#resume">Résumé</Link>
+      </Navi>
+      <Navi>
+        <Link to="#skills">Skills</Link>
+      </Navi>
+      <Navi>
+        <Link to="#works">Works</Link>
+      </Navi>
     </Wrapper>
   );
 }

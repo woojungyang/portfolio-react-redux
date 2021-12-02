@@ -8,9 +8,8 @@ import NaviMbCp from './NaviMbCp';
 const NaviWrapper = styled.ul`
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
-  margin-left: 1.5em;
 `;
 
 const NaviWrap = styled.ul`
@@ -18,19 +17,12 @@ const NaviWrap = styled.ul`
 `;
 const NaviLink = styled(Link)`
   list-style: none;
-  margin: 1em;
+  margin: 1.5em;
   font-family: ${font.en};
-  font-weight: 500;
-  font-size: 1.15em;
+  font-weight: 400;
+  font-size: 1.2em;
   align-items: center;
   cursor: pointer;
-  opacity: 0.7;
-  &:hover {
-    opacity: 1;
-  }
-  &:active {
-    color: red;
-  }
   @media ${media.sm} {
     display: none;
   }
@@ -44,7 +36,6 @@ const Mbbutton = styled.li`
   @media ${media.sm} {
     font-weight: 500;
     margin: 1em;
-    padding-right: 1em;
     font-family: ${font.en};
     font-size: 1.15em;
     cursor: pointer;
