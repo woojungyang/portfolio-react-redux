@@ -21,6 +21,7 @@
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "sass": "^1.44.0",
+    "typing-effect-reactjs": "^1.4.1",
     "yarn": "^1.22.17"
   },
   "scripts": {

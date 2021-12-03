@@ -1,17 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled, { media } from '../style';
-
-import TypeWriter from '../modules/Typewriter';
+import { Typing } from 'typing-effect-reactjs';
 
 import bg from '../assets/img/background.mp4';
 
-const typeWriter = [
-  // '<portfoilo / >',
-  'Hello :D',
-  `<I'm Web-Developer / >`,
-  `<I'm front-end Developer / >`,
-];
+const typeWriter = ['Hello :D', '<portfolio / >', `<I'm Web-Developer / >`];
 
 const BgWrapper = styled.div`
   -webkit-filter: grayscale(100%);
@@ -21,6 +15,7 @@ const BgWrapper = styled.div`
   overflow: hidden;
   margin: 0px auto;
   position: relative;
+  z-index: -1;
   /* @media ${media.sm} {
     background-color: black;
   } */
@@ -37,22 +32,19 @@ const WrapperText = styled.div`
 
 const Writing = styled.div`
   text-align: center;
-  .typewriter-holder {
-    display: block;
-    margin: auto;
-    p {
-      color: white;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-weight: bold;
-      font-size: 2.5em;
-      @media ${media.sm} {
-        font-size: 2em;
-      }
-    }
+  display: block;
+  margin: auto;
+  letter-spacing: 2;
+  color: white;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 2.5em;
+  @media ${media.sm} {
+    font-size: 2em;
   }
 `;
 
@@ -74,10 +66,17 @@ function MainCp() {
       </VideoCp>
       <WrapperText>
         <Writing>
-          <div className="typewriter-holder">
-            <p>
-              <TypeWriter data={typeWriter} />
-            </p>
+          <div>
+            <Typing
+              text={typeWriter}
+              typeSpeed={300}
+              deldteSpeed={300}
+              disableBlinkingOnEnd={50}
+              blinkingSpeed={0}
+              letterSpacing={40}
+              cursorColor=white
+              smartBackspace={true}
+            />
           </div>
         </Writing>
       </WrapperText>

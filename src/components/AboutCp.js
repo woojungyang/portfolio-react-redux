@@ -1,9 +1,6 @@
 import React from 'react';
 
-import styled, { Underline } from '../style';
-
-import img from '../assets/img/photo.png';
-import { style } from 'dom-helpers';
+import styled, { Underline, color, font } from '../style';
 
 const Wrapper = styled.div`
   background-color: black;
@@ -14,7 +11,7 @@ const Wrapper = styled.div`
 
 const Content = styled.div`
   color: white;
-  width: 500px;
+  width: 730px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -22,6 +19,7 @@ const Content = styled.div`
 `;
 
 const Title = styled(Underline)`
+  font-family: ${font.en};
   text-align: center;
   font-size: 1.8em;
   display: block;
@@ -30,8 +28,15 @@ const Title = styled(Underline)`
 `;
 
 const AboutPt = styled.p`
- line-height: 120%;
+font-family: ${font.kr};
+
+ line-height: 180%;
  font-size: 1.3em;
+ span{
+   font-size: 1.2em;
+   font-style: italic;
+   color:${color.success}
+ }
  }
 
 
@@ -44,7 +49,7 @@ function AboutCp() {
         <AboutPt>
           사용자에게 더 나은 웹서비스 환경을 제공하기 위해 새로운 지식 습득과
           자기개발을 아끼지 않으며 개발의 흐름에 민감하게 반응하는
-          <strong> 노력형 개발자 양우정 </strong> 입니다.
+          <span> '노력형 개발자 양우정' </span> 입니다.
         </AboutPt>
       </Content>
     </Wrapper>
