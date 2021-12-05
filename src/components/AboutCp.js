@@ -28,19 +28,16 @@ const Title = styled(Underline)`
 `;
 
 const AboutPt = styled.p`
-font-family: ${font.kr};
-
- line-height: 180%;
- font-size: 1.3em;
- span{
-   font-size: 1.2em;
-   font-style: italic;
-   color:${color.success}
- }
- }
-
-
+  font-family: ${font.kr};
+  line-height: 180%;
+  font-size: 1.3em;
+  span {
+    font-size: 1.2em;
+    font-style: italic;
+    color: ${color.success};
+  }
 `;
+
 function AboutCp() {
   return (
     <Wrapper>

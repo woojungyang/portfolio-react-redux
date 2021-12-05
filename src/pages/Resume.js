@@ -1,7 +1,16 @@
 import React from 'react';
+import AboutCp from '../components/AboutCp';
+
+import HeaderCp from '../components/inc/HeaderCp';
+import ResumeCp from '../components/ResumeCp';
 
 function Resume() {
-  return <div></div>;
+  return (
+    <div>
+      <HeaderCp />
+      <ResumeCp />
+    </div>
+  );
 }
 
-export default Resume;
+export default React.memo(Resume);

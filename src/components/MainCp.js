@@ -69,13 +69,10 @@ function MainCp() {
           <div>
             <Typing
               text={typeWriter}
-              typeSpeed={300}
-              deldteSpeed={300}
-              disableBlinkingOnEnd={50}
+              typeSpeed={400}
+              deldteSpeed={400}
+              disableBlinkingOnEnd={100}
               blinkingSpeed={0}
-              letterSpacing={40}
-              cursorColor=white
-              smartBackspace={true}
             />
           </div>
         </Writing>
